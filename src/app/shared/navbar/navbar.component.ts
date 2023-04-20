@@ -1,29 +1,27 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Component, OnInit, ElementRef, Inject } from '@angular/core';
+import { Location } from '@angular/common';
+import { OnDestroy, HostListener } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(public location: Location, private element : ElementRef) {
+    elem: any; isFullScreen: boolean;
+    constructor(public location: Location, private element : ElementRef, @Inject(DOCUMENT) private document: any) {
         this.sidebarVisible = false;
     }
-
+    ngOnDestroy(): void {
+        throw new Error('Method not implemented.');
+    }
     ngOnInit() {
-        const navbar: HTMLElement = this.element.nativeElement;
-        this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
-        document.getElementById('fullscreen-button').addEventListener('click', () => {
-            if (document.fullscreenElement) {
-              document.exitFullscreen();
-            } else {
-              document.documentElement.requestFullscreen();
-            }
-          });
+        this.chkScreenMode();
+        this.elem = document.documentElement;
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;
@@ -61,4 +59,49 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
+    @HostListener('document:fullscreenchange', ['$event'])
+   @HostListener('document:webkitfullscreenchange', ['$event'])
+   @HostListener('document:mozfullscreenchange', ['$event'])
+   @HostListener('document:MSFullscreenChange', ['$event'])
+fullscreenmodes(event){
+      this.chkScreenMode();
+    }
+chkScreenMode(){
+      if(document.fullscreenElement){
+        //fullscreen
+        this.isFullScreen = true;
+      }else{
+        //not in full screen
+        this.isFullScreen = false;
+      }
+    }
+openFullscreen() {
+        if (this.elem.requestFullscreen) {
+          this.elem.requestFullscreen();
+        } else if (this.elem.mozRequestFullScreen) {
+          /* Firefox */
+          this.elem.mozRequestFullScreen();
+        } else if (this.elem.webkitRequestFullscreen) {
+          /* Chrome, Safari and Opera */
+          this.elem.webkitRequestFullscreen();
+        } else if (this.elem.msRequestFullscreen) {
+          /* IE/Edge */
+          this.elem.msRequestFullscreen();
+        }
+      }
+/* Close fullscreen */
+      closeFullscreen() {
+        if (this.document.exitFullscreen) {
+          this.document.exitFullscreen();
+        } else if (this.document.mozCancelFullScreen) {
+          /* Firefox */
+          this.document.mozCancelFullScreen();
+        } else if (this.document.webkitExitFullscreen) {
+          /* Chrome, Safari and Opera */
+          this.document.webkitExitFullscreen();
+        } else if (this.document.msExitFullscreen) {
+          /* IE/Edge */
+          this.document.msExitFullscreen();
+        }
+      }
 }
