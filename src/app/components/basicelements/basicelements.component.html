@@ -17,14 +17,7 @@
                   <button class="btn btn-primary btn-simple btn-round" type="button">Simple</button>
               </div>
           </div>
-          <p class="category">Pick your size</p>
-          <div class="row">
-              <div class="col-md-10">
-                  <button class="btn btn-primary btn-sm">Small</button>
-                  <button class="btn btn-primary">Regular</button>
-                  <button class="btn btn-primary btn-lg">Large</button>
-              </div>
-          </div>
+          
           <p class="category">Pick your color</p>
           <div class="row">
               <div class="col-md-10">
@@ -37,6 +30,7 @@
                   <button class="btn btn-neutral">Neutral</button>
               </div>
           </div>
+
           <h4>Links</h4>
           <div class="row">
               <div class="col-md-8">
@@ -49,6 +43,7 @@
               </div>
           </div>
       </div>
+
       <div id="inputs">
           <h4>Inputs</h4>
           <p class="category">Form Controls</p>
@@ -101,28 +96,8 @@
                     Unchecked
                 </label>
             </div>
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" checked>
-                    <span class="form-check-sign"></span>
-                    Checked
-                </label>
-            </div>
-            <div class="form-check disabled">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" disabled>
-                    <span class="form-check-sign"></span>
-                    Disabled Unchecked
-                </label>
-            </div>
-            <div class="form-check disabled">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" checked disabled>
-                    <span class="form-check-sign"></span>
-                    Disabled Checked
-                </label>
-            </div>
         </div>
+
         <div class="col-sm-6 col-lg-3">
             <p class="category">Radios</p>
             <div class="form-check form-check-radio">
@@ -139,35 +114,7 @@
                     Radio is on
                 </label>
             </div>
-            <div class="form-check form-check-radio disabled">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="option3" disabled>
-                    <span class="form-check-sign"></span>
-                    Disabled radio is off
-                </label>
-            </div>
-            <div class="form-check form-check-radio disabled">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="option4" disabled checked>
-                    <span class="form-check-sign"></span>
-                    Disabled radio is on
-                </label>
-            </div>
         </div>
-          <div class="col-sm-6 col-lg-3">
-              <p class="category">Toggle Buttons</p>
-              <bSwitch
-                  [(ngModel)]="state">
-              </bSwitch>
-              <bSwitch> Toggle is off
-              </bSwitch>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-              <p class="category">Sliders</p>
-              <nouislider class="slider" [min]="0" [max]="100" [step]="1" [(ngModel)]="simpleSlider" [tooltips]="true"></nouislider>
-              <br>
-              <nouislider class="slider slider-primary" [connect]="true" [min]="0" [max]="100" [step]="1" [(ngModel)]="doubleSlider" [tooltips]="true"></nouislider>
-          </div>
       </div>
     </div>
 </div>

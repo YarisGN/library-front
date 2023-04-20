@@ -17,6 +17,13 @@ export class NavbarComponent implements OnInit {
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+        document.getElementById('fullscreen-button').addEventListener('click', () => {
+            if (document.fullscreenElement) {
+              document.exitFullscreen();
+            } else {
+              document.documentElement.requestFullscreen();
+            }
+          });
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;

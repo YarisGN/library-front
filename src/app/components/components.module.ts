@@ -14,6 +14,8 @@ import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalBasic } from './modal/modal.component';
 
+import { CatalogosComponent } from './catalogos/catalogos.component';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -30,7 +32,9 @@ import { NgbdModalBasic } from './modal/modal.component';
         TypographyComponent,
         NucleoiconsComponent,
         NotificationComponent,
-        NgbdModalBasic
+        NgbdModalBasic,
+
+        CatalogosComponent
     ],
     exports:[ ComponentsComponent ]
 })
