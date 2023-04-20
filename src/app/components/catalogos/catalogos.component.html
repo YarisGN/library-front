@@ -27,10 +27,150 @@
         </div>
     </div>
 </div>
-<div class="cuadros">
-    <div class="row">
-        <div class="col-sm-6 col-lg-3">
 
-        </div>
+
+<div fxLayout="row wrap" style="mt-5">
+    <div fxFlex="100" fxFlex.gt-md="100" fxFlex.md="100" class="flex-p">
+
+        <section id="grid" class="grid clearfix main-box">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <a style="width: 100%; " [routerLink]="['/autor']" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+                        <figure class="bg">
+                            <img src="../../../assets/home/img/img1.jpg" />
+                            <svg class="svg" viewBox="0 0 180 100" preserveAspectRatio="none">
+                            <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+                            <figcaption>
+                                <h2 fxLayout="column" class="centrado-porcentual"><img src="../../../assets/img/img-project/home-user.png" style="transform: scale(1.2)" class="img-fluid img-responsive"></h2>
+                                <button>Autor</button>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+
+                    <a style="width: 100%" [routerLink]="['/titulo']" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                        <figure class="bg">
+                            <img src="../../../assets/home/img/img2.jpg" />
+                            <svg class="svg" viewBox="0 0 180 100" preserveAspectRatio="none">
+                      <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+                            <figcaption>
+                                <h2 fxLayout="column" class="centrado-porcentual"><img src="../../../assets/img/img-project/home-page.png" class="img-fluid img-responsive"></h2>
+                                <button>Titulo</button>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+
+                    <a style="width: 100%; " [routerLink]="['/materia']" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                        <figure class="bg">
+                            <img src="../../../assets/home/img/img3.jpg" />
+                            <svg class="svg" viewBox="0 0 180 100" preserveAspectRatio="none">
+                            <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+                            <figcaption>
+                                <h2 fxLayout="column"class="centrado-porcentual"><img src="../../../assets/img/img-project/home-book.png" class="img-fluid img-responsive"></h2>
+                                <button>Materia</button>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="grid" class="grid clearfix">
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="box-link" [routerLink]="['/seriada1']" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                        <figure style="border-radius: 10px">
+                            <img src="../../../assets/home/img/bot1.jpg" />
+                            <svg class="svg" viewBox="0 0 350 110" preserveAspectRatio="none">
+                            <path id="bot1" d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+                            <figcaption>
+                                <h2 class="centrado-porcentual-left"><img style=" width: 100px; height: 90px;" src="../../../assets/img/img-project/home-calendar.png">
+                                </h2>
+                                <button>Publicaciones</button>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-6">
+
+                    <a class="box-link" [routerLink]="['/explorar']" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                        <figure style="border-radius: 10px">
+                            <img src="../../../assets/home/img/bot2.jpg" />
+                            <svg class="svg" viewBox="0 0 350 110" preserveAspectRatio="none">
+                            <path id="bot2" d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+                            <figcaption>
+                                <h2 class="centrado-porcentual-left"><img class="img-fluid" style="width: 100px; height: 90px;" src="../../../assets/img/img-project/home-users.png"></h2>
+                                <button>Explorar <br>Catalogo</button>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section id="grid" class="grid clearfix">
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="box-link" (click)="openSnackBar('Warning', 'Proximamente')" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                        <figure style="border-radius: 10px">
+                            <img src="../../../assets/home/img/bot3.jpg" />
+                            <svg class="svg" viewBox="0 0 350 100" preserveAspectRatio="none">
+                            <path id="bot3" d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+                            <figcaption>
+                                <h2  class="centrado-porcentual-left"><img class="img-fluid" style="width: 100px; height: 100px; " src="../../../assets/img/img-project/home-computer.png"></h2>
+                                <button>Reservas <br>Web</button>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="mini-box-link" (click)="openSnackBar('Warning', 'Proximamente')" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                                <figure class="mini-box">
+                                    <img src="../../../assets/home/img/cir-dig.jpg" />
+                                    <svg class="svg" viewBox="0 0 180 100" preserveAspectRatio="none">
+                                    <path class="cir" d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+                                    <figcaption>
+                                        <h2 fxLayout="column" class="centrado-porcentual"><img class="img-fluid img-responsive"  src="../../../assets/img/img-project/home-circulacion.png">
+                                        </h2>
+                                        <button  class="box-small-btn">Cir...<br>Digital</button>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="mini-box-link" (click)="openSnackBar('Warning', 'Proximamente')" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                                <figure class="mini-box">
+                                    <img src="../../../assets/home/img/cir-fis.jpg" />
+                                    <svg class="svg" viewBox="0 0 180 100" preserveAspectRatio="none">
+                                    <path class="cir" d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+                                    <figcaption>
+                                        <h2 fxLayout="column" class="centrado-porcentual"><img class="img-fluid img-responsive" src="../../../assets/img/img-project/home-openbook-mini.png">
+                                        </h2>
+                                        <button class="box-small-btn">D.S.I</button>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
     </div>
 </div>
