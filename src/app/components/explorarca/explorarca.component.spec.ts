@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExplorarCComponent } from './explorar-c.component';
+import { ExplorarcaComponent } from './explorarca.component';
 
-describe('ExplorarCComponent', () => {
-  let component: ExplorarCComponent;
-  let fixture: ComponentFixture<ExplorarCComponent>;
+describe('ExplorarcaComponent', () => {
+  let component: ExplorarcaComponent;
+  let fixture: ComponentFixture<ExplorarcaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExplorarCComponent ]
+      declarations: [ ExplorarcaComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ExplorarCComponent);
+    fixture = TestBed.createComponent(ExplorarcaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

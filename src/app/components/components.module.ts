@@ -15,7 +15,8 @@ import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalBasic } from './modal/modal.component';
 
 import { CatalogosComponent } from './catalogos/catalogos.component';
-import { ExplorarCComponent } from './explorar-c/explorar-c.component';
+import { ExplorarcaComponent } from './explorarca/explorarca.component';
+
 
 @NgModule({
     imports: [
@@ -36,7 +37,7 @@ import { ExplorarCComponent } from './explorar-c/explorar-c.component';
         NgbdModalBasic,
 
         CatalogosComponent,
-         ExplorarCComponent
+        ExplorarcaComponent,
     ],
     exports:[ ComponentsComponent ]
 })
