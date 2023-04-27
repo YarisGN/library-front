@@ -15,6 +15,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalBasic } from './modal/modal.component';
 
 import { CatalogosComponent } from './catalogos/catalogos.component';
+import { ExplorarCComponent } from './explorar-c/explorar-c.component';
 
 @NgModule({
     imports: [
@@ -34,7 +35,8 @@ import { CatalogosComponent } from './catalogos/catalogos.component';
         NotificationComponent,
         NgbdModalBasic,
 
-        CatalogosComponent
+        CatalogosComponent,
+         ExplorarCComponent
     ],
     exports:[ ComponentsComponent ]
 })
